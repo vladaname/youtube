@@ -1,0 +1,14 @@
+package com.example.youtube.repository;
+
+import com.example.youtube.model.Akaunt;
+import com.example.youtube.model.Korisnik;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
+
+public interface AkauntRepository extends JpaRepository<Akaunt, Integer> {
+
+    Akaunt findByKorisnik(Korisnik korisnik);
+}
